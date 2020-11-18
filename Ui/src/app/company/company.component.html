@@ -1,0 +1,109 @@
+<h2 style="text-align:center;">Add/Update Company</h2>
+<link href="E:\Documents\Files\SocGen\Phase 3\Project\Ui\src\app\login\login.component.css" rel="stylesheet" type="text/css">
+<body>
+    <form>
+
+            <div class="form-group">
+        
+                <label for="exampleInputEmail1">Company ID :</label>
+        
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" [(ngModel)]="CompanyId" placeholder="Company ID">
+        
+              </div>
+        
+        
+        
+            <div class="form-group">
+        
+              <label for="exampleInputEmail1">Company Name:</label>
+        
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" [(ngModel)]="CompanyName" placeholder="CompanyName">
+        
+            </div>
+        
+          
+        
+            <br>
+        
+            <div class="form-group">
+        
+              <label for="exampleInputPassword1">TurnOver :</label>
+        
+              <input type="number" class="form-control" id="exampleInputPassword1" name="password"  [(ngModel)]="Turnover" placeholder="Turnover">
+        
+            </div>
+        
+            <br>
+        
+            <div class="form-group">
+        
+                <label for="exampleInputEmail1">CEO    :</label>
+        
+                <input type="text" class="form-control" id="exampleInputPassword1" name="usertype"  [(ngModel)]="CEO" placeholder="CEO">
+        
+              </div>
+        
+              <br>
+        
+        
+        
+              <div class="form-group">
+        
+                <label for="exampleInputEmail1">BoardOfDirectors   :</label>
+        
+                <input type="text" class="form-control" id="exampleInputPassword1" name="mobile"  [(ngModel)]="BoardOfDirectors" placeholder="BoardOfDirectors">
+        
+              </div>
+        
+              <br>
+        
+        
+        
+              <div class="form-group">
+        
+                <label for="exampleInputEmail1">ListedInStockExchange :</label>
+        
+                <input type="number" class="form-control" id="exampleInputPassword1" name="email"  [(ngModel)]="ListedInStockExchange" placeholder="ListedInStockExchange">
+        
+              </div>
+        
+              <br>
+
+        <div class="form-group">
+        
+                    <label for="exampleInputEmail1">Sector   :</label>
+            
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="email"  [(ngModel)]="Sector" placeholder="Sector">
+            
+                  </div>
+            
+                  <br>
+
+            <div class="form-group">
+        
+                        <label for="exampleInputEmail1">BriefWriteup :</label>
+                
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="email"  [(ngModel)]="BriefWriteup" placeholder="BriefWriteup">
+                
+                      </div>
+                
+                      <br>
+        
+                
+                <div class="form-group">
+        
+                            <label for="exampleInputEmail1">CompanyStockCode :</label>
+                    
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="email"  [(ngModel)]="CompanyStockCode" placeholder="CompanyStockCode">
+                    
+                          </div>
+                    
+                          <br>
+        
+            <div class="middle">
+        
+            <button type="submit" class="btn btn-primary" (click)="addcompany()">Add_Company</button>
+        <button type="submit" class="btn btn-primary" (click)="updatecompany()">Update_Company</button>
+        </div>
+        
+          </form>

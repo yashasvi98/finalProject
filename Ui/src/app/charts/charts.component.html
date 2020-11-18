@@ -1,0 +1,48 @@
+<h2> Company Chart</h2>
+<form>
+    <div>
+        <label >Stock Code :    </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="Stock Code"  [(ngModel)]="Stockcode" placeholder="Stock Code"></div>
+    <br>
+    <div>
+        <label >From Date :     </label>
+        <input type="date" class="form-control" id="exampleInputPassword1" name="fromdate"  [(ngModel)]="fromdate" placeholder="From date"></div>
+    <br>
+    <div>
+        <label >To Date :   </label>
+        <input type="date" class="form-control" id="exampleInputPassword1" name="todate"  [(ngModel)]="todate" placeholder="To date"></div>
+    <br>
+    <div>
+        <label >From Time : </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="fromtime"  [(ngModel)]="fromtime" placeholder="From time"></div>
+    <br>
+    <div>
+        <label >To Time :   </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="totime"  [(ngModel)]="totime" placeholder="To time"></div>
+    <br>
+    <div>
+        <label >Chart Type   :  </label>
+        <select name="type" id="cars"  [(ngModel)]="type">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+        <option value="doughnut">Doughnut</option>
+        <option value="radar">Radar</option>
+        <option value="bubble">bubble</option>
+      </select>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="display()">Display Chart</button>
+</form>
+
+<div class="chart-wrapper" *ngIf="displaychart">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>

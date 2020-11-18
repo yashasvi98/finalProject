@@ -1,0 +1,29 @@
+<h2>User-HomePage</h2>
+
+<button class="btn btn-primary" [routerLink]="['/chart']" >Stock Chart</button>
+<p>     </p>
+<button class="btn btn-primary" [routerLink]="['/sectorchart']" >Sector Chart</button>
+<p>     </p>
+<button type="submit" class="btn btn-primary" (click)="getallipo()">Get all IPO</button>
+<table class="table">
+    <thead>
+    <tr>  
+    <th>ID</th>
+    <th>CompanyName</th>
+    <th>PricePerShare</th>
+    <th> TotalNoOfShares</th>
+    <th> OpenDateTime</th>
+    <th>Remarks</th>
+    </tr>
+ </thead>
+    <tbody>
+    <tr *ngFor="let item of list">
+     <td>{{item.id}}</td>   
+     <td>{{item.companyName}}</td>
+     <td>{{item.pricePerShare}}</td>
+     <td>{{item.totalNoOfShares}}</td>
+     <td>{{item.openDateTime}}</td>
+     <td>{{item.remarks}}</td>
+        </tr>
+</tbody>
+    </table>

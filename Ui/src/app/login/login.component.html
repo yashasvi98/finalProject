@@ -1,0 +1,28 @@
+<h2 style="text-align:center;"> Login</h2>
+<link href="E:\Documents\Files\SocGen\Phase 3\Project\Ui\src\app\login\login.component.css" rel="stylesheet" type="text/css">
+<body>
+  <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">User Name :</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" [(ngModel)]="username" placeholder="Username">
+      </div>
+    
+      <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password      :</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password"  [(ngModel)]="password" placeholder="Password">
+      </div>
+      <br>
+      <div class="form-group">
+          <label for="exampleInputEmail1">UserType      :</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="usertype"  [(ngModel)]="usertype" placeholder="Admin/User">
+        </div>
+        <br>
+      <div class="middle">
+      <button class="btn btn-primary" (click)="Login()">Login</button>
+      </div>
+      <div class="middle">
+        <button class="nav-item nav-link-edit" [routerLink]="['/SignUp']">Sign Up</button >
+        </div>
+    </form>
+  
